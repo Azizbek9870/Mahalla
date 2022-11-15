@@ -21,4 +21,9 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::resource('/people',\App\Http\Controllers\PeopleController::class)->middleware(['auth', 'verified']);
+
+
+
+
 require __DIR__.'/auth.php';

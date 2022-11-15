@@ -1,3 +1,4 @@
+
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="{{ route('dashboard') }}" class="app-brand-link">
@@ -67,34 +68,34 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-    @if(\Illuminate\Support\Facades\Auth::user()->role=='super_admin')
+{{--    @if(\Illuminate\Support\Facades\Auth::user()->role=='super_admin')--}}
 
         <!-- Dashboard -->
-            <li class="menu-item {{  request()->routeIs('admin.universities.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.universities.index') }}" class="menu-link">
+            <li class="menu-item {{  request()->routeIs('people.index') ? 'active' : '' }}">
+                <a href="{{route('people.index')}}" class="menu-link">
                     <i class="menu-icon tf-icons fas fa-university"></i>
-                    <div data-i18n="Analytics">Universitetlar</div>
+                    <div data-i18n="Analytics">People</div>
                 </a>
             </li>
-            <li class="menu-item {{  request()->routeIs('admin.facultets.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.facultets.index') }}" class="menu-link">
-                    <i class="menu-icon tf-icons fas fa-building"></i>
-                    <div data-i18n="Analytics">Fakultetlar</div>
-                </a>
-            </li>
-            <li class="menu-item {{  request()->routeIs('admin.groups.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.groups.index') }}" class="menu-link">
-                    <i class="menu-icon tf-icons fas fa-layer-group"></i>
-                    <div data-i18n="Analytics">Guruhlar</div>
-                </a>
-            </li>
-            <li class="menu-item {{  request()->routeIs('admin.users.index') ? 'active' : '' }}">
-                <a href="{{ route('admin.users.index') }}" class="menu-link">
-                    <i class="menu-icon tf-icons fas fa-user"></i>
-                    <div data-i18n="Analytics">Xodimlar</div>
-                </a>
-            </li>
-        @endif
+{{--            <li class="menu-item {{  request()->routeIs('admin.facultets.index') ? 'active' : '' }}">--}}
+{{--                <a href="{{ route('admin.facultets.index') }}" class="menu-link">--}}
+{{--                    <i class="menu-icon tf-icons fas fa-building"></i>--}}
+{{--                    <div data-i18n="Analytics">Fakultetlar</div>--}}
+{{--                </a>--}}
+{{--            </li>--}}
+{{--            <li class="menu-item {{  request()->routeIs('admin.groups.index') ? 'active' : '' }}">--}}
+{{--                <a href="{{ route('admin.groups.index') }}" class="menu-link">--}}
+{{--                    <i class="menu-icon tf-icons fas fa-layer-group"></i>--}}
+{{--                    <div data-i18n="Analytics">Guruhlar</div>--}}
+{{--                </a>--}}
+{{--            </li>--}}
+{{--            <li class="menu-item {{  request()->routeIs('admin.users.index') ? 'active' : '' }}">--}}
+{{--                <a href="{{ route('admin.users.index') }}" class="menu-link">--}}
+{{--                    <i class="menu-icon tf-icons fas fa-user"></i>--}}
+{{--                    <div data-i18n="Analytics">Xodimlar</div>--}}
+{{--                </a>--}}
+{{--            </li>--}}
+{{--        @endif--}}
         @if(\Illuminate\Support\Facades\Auth::user()->role=='user')
             <li class="menu-item {{  request()->routeIs('admin.user.group') ? 'active' : '' }}">
                 <a href="{{ route('admin.user.group') }}" class="menu-link">
