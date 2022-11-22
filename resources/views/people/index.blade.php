@@ -11,16 +11,16 @@
                 @endif
 
 <div class="container">
-    <a href="{{route('people.create')}}" class="btn btn-primary">Qoshish</a>
+    <a href="{{route('people.create')}}" class="btn btn-primary">Fuqaro Qo'shish</a>
 
     <table class="table">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Father Name</th>
-            <th scope="col">Birthdate</th>
+            <th scope="col">Ismi</th>
+            <th scope="col">Familiyasi</th>
+            <th scope="col">Otasining Ismi</th>
+            <th scope="col">Tug'ilgan yili</th>
             <th scope="col">Passport</th>
             <th scope="col">Amallar</th>
         </tr>

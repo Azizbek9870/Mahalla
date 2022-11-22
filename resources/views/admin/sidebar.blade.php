@@ -74,7 +74,7 @@
             <li class="menu-item {{  request()->routeIs('people.index') ? 'active' : '' }}">
                 <a href="{{route('people.index')}}" class="menu-link">
                     <i class="menu-icon tf-icons fas fa-university"></i>
-                    <div data-i18n="Analytics">People</div>
+                    <div data-i18n="Analytics">Fuqarolar</div>
                 </a>
             </li>
 {{--            <li class="menu-item {{  request()->routeIs('admin.facultets.index') ? 'active' : '' }}">--}}
