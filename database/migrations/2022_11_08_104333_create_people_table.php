@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('fathername');
             $table->date('birthdate');
             $table->string('passport');
+            $table->softDeletes('deleted_at');
             $table->timestamps();
         });
     }

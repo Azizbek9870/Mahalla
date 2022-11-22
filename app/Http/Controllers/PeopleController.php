@@ -115,20 +115,17 @@ $status->save();
         $show->fathername=$request['fathername'];
         $show->birthdate=$request['birthdate'];
         $show->passport=$request['passport'];
-//        dd($request->status);
-$show->save();
-//dd($show->id);
+        $show->save();
 
-        foreach ($request['status'] as $k=>$q) {
-//            dd($q);
+        foreach ($request->status as $k=>$q) {
+            $statuss=PeopleStatus::where('people_id',$show['id'])->delete();
+
             $status=new PeopleStatus();
-            $status->people_id = $show['id'];
+            $status->people_id= $show->id;
             $status->status_id=$q;
-
+//            dd($status);
             $status->save();
         }
-//        dd($status);
-
         return redirect(route('people.index'))->with('success', 'People edit');
     }
 
@@ -141,6 +138,7 @@ $show->save();
     public function destroy($id)
     {
         $people=People::find($id);
+        $people_s=PeopleStatus::where('people_id',$id)->delete();
         $people->delete();
         return  redirect(route('people.index'))->with('success','People delete');
     }
