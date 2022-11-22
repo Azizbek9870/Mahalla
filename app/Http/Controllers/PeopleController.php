@@ -16,7 +16,7 @@ class PeopleController extends Controller
      */
     public function index()
     {
-        $peoples=People::all();
+        $peoples=People::where('dead_date',0)->get();
         return  view('people.index',compact('peoples'));
     }
 
@@ -137,9 +137,11 @@ $status->save();
      */
     public function destroy($id)
     {
+        $year = date("Y", strtotime(now()));
         $people=People::find($id);
         $people_s=PeopleStatus::where('people_id',$id)->delete();
-        $people->delete();
+        $people['dead_date'] = $year;
+        $people->save();
         return  redirect(route('people.index'))->with('success','People delete');
     }
 }
