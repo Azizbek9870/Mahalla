@@ -56,7 +56,7 @@ $status->save();
         }
 //        dd($status);
 
-        return redirect(route('people.index'))->with('success', 'People success');
+        return redirect(route('people.index'))->with('success', "Qo'shish muvaffaqatli amalga oshirildi!");
 
     }
 
@@ -126,7 +126,7 @@ $status->save();
 //            dd($status);
             $status->save();
         }
-        return redirect(route('people.index'))->with('success', 'People edit');
+        return redirect(route('people.index'))->with('success', "Tahrirlash muvaffaqatli amalga oshirildi!");
     }
 
     /**
@@ -140,6 +140,6 @@ $status->save();
         $people=People::find($id);
         $people_s=PeopleStatus::where('people_id',$id)->delete();
         $people->delete();
-        return  redirect(route('people.index'))->with('success','People delete');
+        return  redirect(route('people.index'))->with('success',"O'chirish muvaffaqatli amalga oshirildi!");
     }
 }

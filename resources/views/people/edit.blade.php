@@ -7,22 +7,22 @@
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
-                    <label for="firstname" class="form-label">First Name</label>
+                    <label for="firstname" class="form-label">Ism</label>
                     <input type="text" class="form-control" id="firstname" value="{{$people->firstname}}" name="firstname" required>
 
                 </div>
                 <div class="mb-3">
-                    <label for="lastname" class="form-label">Last Name</label>
+                    <label for="lastname" class="form-label">Familiyasi</label>
                     <input type="text" class="form-control" id="lastname" value="{{$people->lastname}}" name="lastname" required>
 
                 </div>
                 <div class="mb-3">
-                    <label for="fathername" class="form-label">father Name</label>
+                    <label for="fathername" class="form-label">Otasining Ismi</label>
                     <input type="text" class="form-control" id="fathername" value="{{$people->fathername}}" name="fathername" required>
 
                 </div>
                 <div class="mb-3">
-                    <label for="birthdate" class="form-label">Birthdate</label>
+                    <label for="birthdate" class="form-label">Tug'ilgan yili</label>
                     <input type="date" class="form-control"  id="birthdate" value="{{$people->birthdate}}"  name="birthdate" required>
 
                 </div>
@@ -41,7 +41,7 @@
                     @endforeach
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Saqlash</button>
             </form>
         </div>
     </div>
