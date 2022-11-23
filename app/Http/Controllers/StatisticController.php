@@ -34,7 +34,7 @@ class StatisticController extends Controller
 
 
         $live_peoples = DB::table('people')
-            ->where("dead_date", 0)
+//            ->where("dead_date", 0)
             ->select('birthdate')
             ->get('birthdate');
         $live_peoples = json_decode($live_peoples, true);
@@ -50,7 +50,9 @@ class StatisticController extends Controller
         foreach ($dead_peoples as $item){
             array_push($dates, intval($item['dead_date']));
         }
+        if (count($dates) > 0)
         $min_date = min($dates);
+        else $min_date = 2000;
         $live_date = [];
         for($i=$min_date; $i<=$year; $i++){
             $live_date[$i] = 0;
