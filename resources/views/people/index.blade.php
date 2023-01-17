@@ -38,7 +38,7 @@
 
 
                 <form action="{{route('people.destroy', $people->id)}}" class="d-flex" method="post">
-                    <a href="{{route('people.show',$people->id)}}" class="btn btn-info m-1"> <i class="fa fa-eye"></i></a>
+                    {{--<a href="{{route('people.show',$people->id)}}" class="btn btn-info m-1"> <i class="fa fa-eye"></i></a>--}}
                     <a href="{{route('people.edit',$people->id)}}" class="btn btn-info m-1"> <i class="fa fa-pen"></i></a>
                     @method('DELETE')
                     @csrf
