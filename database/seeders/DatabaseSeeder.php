@@ -22,22 +22,22 @@ class DatabaseSeeder extends Seeder
              'email' => 'admin@gmail.com',
              'password' => Hash::make('admin'),
          ]);
-         \App\MOdels\Status::create([
+         \App\Models\Status::create([
              'status'=>'talaba'
          ]);
-        \App\MOdels\Status::create([
+        \App\Models\Status::create([
             'status'=>'ishsizlar'
         ]);
-        \App\MOdels\Status::create([
+        \App\Models\Status::create([
             'status'=>'imkoniyati cheklanganlar'
         ]);
-        \App\MOdels\Status::create([
+        \App\Models\Status::create([
             'status'=>'ayollar daftari'
         ]);
-        \App\MOdels\Status::create([
+        \App\Models\Status::create([
             'status'=>'temir daftar'
         ]);
-        \App\MOdels\Status::create([
+        \App\Models\Status::create([
             'status'=>'kam ta\'minlanganlar'
         ]);
     }
